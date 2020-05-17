@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
-#include "Lb3.h"
+#include "Deque.h"
 
 int main(){
 	Deque D;

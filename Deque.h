@@ -5,7 +5,7 @@ typedef struct Deque {
 	int final;//Указатель конца.
 	int  size;//Размер дека.
 }Deque;
-int Initialize(Deque D, int);//Инициализация дека.
+int Initialize(Deque D, int n);//Инициализация дека.
 int PushFront(Deque D, int x);//положить в начало.
 int PopFront(Deque D);//взять из начала.
 int PushBack(Deque D, int x);//положить в начало.

@@ -1,0 +1,4 @@
+﻿  Main.c
+c:\users\user\source\repos\project17\project17\main.c(18): warning C4474: "scanf" : для строки формата передано слишком много аргументов
+  c:\users\user\source\repos\project17\project17\main.c(18): note: заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+  Project17.vcxproj -> C:\Users\user\source\repos\Project17\Debug\Lb3.exe
