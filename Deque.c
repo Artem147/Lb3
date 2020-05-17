@@ -6,7 +6,7 @@
 
 int Initialize(Deque *D, int n)
 {
-	D->data = (int*)malloc(n * sizeof(int));
+	D->data = (int*)malloc(2*n * sizeof(int));
 	if (!D->data) return 0;
 	if (n == 1)
 		D->start = 0;
