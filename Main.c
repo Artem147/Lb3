@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
+#include "Lb3.h"
 
 int main(){
+	Deque D;
 	int K;//Длина разбиения.
 	int n;//Количество элементов.
 	int i;//Счетчики.
