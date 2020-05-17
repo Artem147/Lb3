@@ -116,7 +116,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Deque.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Source.c" />
+    <ClCompile Include="Source.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Deque.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
