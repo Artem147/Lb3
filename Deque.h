@@ -5,10 +5,10 @@ typedef struct Deque {
 	int final;//”казатель конца.
 	int  size;//–азмер дека.
 }Deque;
-int Initialize(Deque D, int n);//»нициализаци€ дека.
-int PushFront(Deque D, int x);//положить в начало.
-int PopFront(Deque D);//вз€ть из начала.
-int PushBack(Deque D, int x);//положить в начало.
-int PopBack(Deque D);//вз€ть из конца.
-int isEmpty(Deque D);//проверка пустой дек или нет.
-void print(Deque D, int n);//вывод дека на экран.
+int Initialize(Deque * D, int n);//»нициализаци€ дека.
+int PushFront(Deque * D, int x);//положить в начало.
+int PopFront(Deque * D);//вз€ть из начала.
+int PushBack(Deque* D, int x);//положить в начало.
+int PopBack(Deque *D);//вз€ть из конца.
+int isEmpty(Deque *D);//проверка пустой дек или нет.
+void PrintData(Deque *D);//вывод дека на экран.

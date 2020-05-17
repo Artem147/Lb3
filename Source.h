@@ -1,1 +1,2 @@
-int* InputData(int*A,int n);//Инициализация и ввод массива.
+//Инициализация и ввод массива.
+int* InputData(int n);

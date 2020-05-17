@@ -3,8 +3,9 @@
 #include <malloc.h>
 #include <stdlib.h>
 
-int* InputData(int*A, int n)
+int* InputData(int n)
 {
+	int*A;
 	int i;
 	A = (int*)malloc(n*sizeof(int));
 	for(i=0; i<n; i++)
