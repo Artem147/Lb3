@@ -14,6 +14,12 @@
 
 int main()
 {
+	printf("Deque initialization function, realization\n");
+	printf("of the main functions of the deque.\n");
+	printf("Functions for finding the minimum on each \n");
+	printf("sub-section of given array A.\n");
+	printf("Shirkunov Artem IVT-13BO\n");
+	printf("\n");
 	//Массив из минимумов на каждом подотрезке.
 	int* ans;
 	ans = NULL;
@@ -43,7 +49,11 @@ int main()
 	//Инициализация исходного массива.
 	array = InputData(number, number, array);
 	//Инициализация дека.
-	Initialize(D, number);
+	if(!Initialize(D, number)) 
+	{
+		printf("Invalid value");
+		return 0;
+	}
 	//Если длина подотрезка равна 1, каждый элемент - минимум подотрезка.
 	if (sub_len == 1) 
 		ans = array;
@@ -56,6 +66,8 @@ int main()
 	//Освобождение памяти.
 	free(array);
 	free(ans);
+	free(D);
+	printf("\n");
 	system("pause");
 	return 0;
 }

@@ -11,7 +11,7 @@
 #include "Deque.h"
 
 //Инициализация дека. 
-int Initialize(Deque *D, int number)
+int Initialize(Deque* D, int number)
 {
 	D->data = (int*)malloc(2*number*sizeof(int));
 	if (!D->data) return 0;
@@ -23,7 +23,7 @@ int Initialize(Deque *D, int number)
 };
 
 //Положить x в начало.
-int PushFront(Deque *D, int x)
+int PushFront(Deque* D, int x)
 {
 	D->start--;
 	 D->data[D->start]=x;
@@ -31,7 +31,7 @@ int PushFront(Deque *D, int x)
 }
 
 //Положить x в конец.
-int PushBack(Deque *D, int x)
+int PushBack(Deque* D, int x)
 {
 	D->final++;
 	D->data[D->final] = x;
@@ -39,7 +39,7 @@ int PushBack(Deque *D, int x)
 }
 
 //Взять из начала.
-int PopFront(Deque *D)
+int PopFront(Deque* D)
 {
 	D->start++;
 	return D->data[D->start - 1];

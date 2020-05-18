@@ -1,5 +1,5 @@
-﻿  Deque.c
-c:\users\user\source\repos\project17\project17\deque.c(65): warning C4047: ==: "int (__cdecl *)(Deque *)" отличается по уровням косвенного обращения от "int"
-c:\users\user\source\repos\project17\project17\deque.c(68): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "int"
-c:\users\user\source\repos\project17\project17\deque.c(68): warning C4024: printf: различные типы для формального и фактического параметров 1
+﻿  Main.c
+c:\users\user\source\repos\project17\project17\main.c(38): warning C4474: "scanf" : для строки формата передано слишком много аргументов
+  c:\users\user\source\repos\project17\project17\main.c(38): note: заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+c:\users\user\source\repos\project17\project17\main.c(62): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
   Project17.vcxproj -> C:\Users\user\source\repos\Project17\Debug\Lb3.exe
