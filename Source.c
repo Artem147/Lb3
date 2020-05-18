@@ -20,9 +20,12 @@ int Comparison(Deque* D)
 		D->final--;
 	}
 }
-int CleanDeque(Deque* D) 
+int CleanDeque(Deque* D, int* A, int K) 
 {
-
+	int i;
+	if (isEmpty) return 0;
+	if (D->data[D->start] == A[i - K])
+		PopFront(D);
 }
 int Function(Deque* D, int K, int* A, int n)
 {
