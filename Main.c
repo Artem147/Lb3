@@ -31,8 +31,8 @@ int main()
 	Initialize(D,n);
 	ans = Function(D,K,A,n);
 	/*PrintData(D);*/
-	//for (i = 0; i < n; i++)//Вывод исходного массива.
-	//	printf("%d ", A[i]);
+	for (i = 0; i < (n - K + 1); i++)//Вывод ответа.
+		printf("%d ", ans[i]);
 	system("pause");
 	return 0;
 }

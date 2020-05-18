@@ -44,15 +44,16 @@ int Function(Deque* D, int K, int* A, int n)
 	for (i = 0; i < n; i++)
 	{
 		//Если пройден подотрезок, записываем минимум в ответ. 
-		if (i > K)
+		if (i >= K)
 		{
 			ans[j] = CleanDeque(D, A, K, i);
 			j++;
 		}
 		//Добавляем новый элемент в конец дека.
-		PushBack(D,A[i]);
+		PushBack(D, A[i]);
 		//Сравнение элементов, минимум оказывается на вершине дека.
 		Comparison(D);
 	}
+	ans[j] = CleanDeque(D, A, K, i);
 	return ans;
 }
