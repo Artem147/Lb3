@@ -3,7 +3,7 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include "Deque.h"
-
+//Создание и заполнение массива. Очистка памяти вне функции.
 int* InputData(int n,int* A)
 {
 	int i;

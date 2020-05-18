@@ -1,7 +1,4 @@
-﻿  Main.c
-  Source.c
-  Создание кода...
-c:\users\user\source\repos\project17\project17\source.c(22): warning C4716: Comparison: должна возвращать значение
-c:\users\user\source\repos\project17\project17\source.c(26): warning C4716: CleanDeque: должна возвращать значение
-c:\users\user\source\repos\project17\project17\source.c(37): warning C4716: Function: должна возвращать значение
+﻿  Deque.c
+c:\users\user\source\repos\project17\project17\deque.c(47): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "int"
+c:\users\user\source\repos\project17\project17\deque.c(47): warning C4024: printf: различные типы для формального и фактического параметров 1
   Project17.vcxproj -> C:\Users\user\source\repos\Project17\Debug\Lb3.exe

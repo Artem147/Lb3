@@ -1,5 +1,5 @@
-#ifndef UniqueDEQUE
-#define UniqueDEQUE
+#ifndef _DEQUE_
+#define _DEQUE_
 #include <stdio.h>
 typedef struct Deque 
 {
@@ -15,4 +15,4 @@ int PushBack(Deque* D, int x);//положить в начало.
 int PopBack(Deque *D);//взять из конца.
 int isEmpty(Deque *D);//проверка пустой дек или нет.
 void PrintData(Deque *D);//вывод дека на экран.
-#endif //DEQUE
+#endif //_DEQUE_
