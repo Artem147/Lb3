@@ -15,10 +15,12 @@ int* InputData(int number, int origin_number, int* array)
 {
 	int i;
 	array = malloc(number * sizeof(int));
-	if (!array) return NULL;
+	if (!array) 
+		return NULL;
 	//Сравниваем количество элементов, с количеством элементов
 	//исходного массива. Return для массива ans[].
-	if(number< origin_number) return array;
+	if(number< origin_number) 
+		return array;
 	for(i=0; i< number; i++)
 		scanf("%d", &array[i]);
 	//Return для исходного массива.
@@ -36,6 +38,7 @@ int Comparison(Deque* D)
 		D->final--;
 	}
 }
+
 //Выводит минимальный элемент и удаляет его из дека, 
 //если он равен ушедшему из подотрезка элементу.
 int CleanDeque(Deque* D, int* array, int sub_len, int i)
@@ -55,7 +58,7 @@ int CleanDeque(Deque* D, int* array, int sub_len, int i)
 //Добавляет элемент в дек. Если подотрезок пройден, выводит минимум в массив ans. 
 int Algorithm(Deque* D, int sub_len, int* array, int number)
 {
-	int i,j=0;
+	int i, j=0;
 	//Массив с минимумами на подотрезках.
 	int* ans=NULL;
 	//Выделение памяти массива с ответом.
