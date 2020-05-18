@@ -1,5 +1,7 @@
 ﻿  Main.c
   Source.c
   Создание кода...
-Debug\Source.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
+c:\users\user\source\repos\project17\project17\source.c(22): warning C4716: Comparison: должна возвращать значение
+c:\users\user\source\repos\project17\project17\source.c(26): warning C4716: CleanDeque: должна возвращать значение
+c:\users\user\source\repos\project17\project17\source.c(37): warning C4716: Function: должна возвращать значение
   Project17.vcxproj -> C:\Users\user\source\repos\Project17\Debug\Lb3.exe

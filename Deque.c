@@ -44,7 +44,7 @@ int isEmpty(Deque *D)//проверка пустой дек или нет.
 void PrintData(Deque *D)
 {
 	int i;
-	if (D->start = D->final) printf(D->data[D->start]);
+	if (D->start == D->final) printf(D->data[D->start]);
 	else 
 		for (i = D->start; i <= D->final; i++)
 			printf("%d ", D->data[i]);
