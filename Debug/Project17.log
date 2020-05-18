@@ -1,5 +1,5 @@
-﻿  MinSearch.c
-c:\users\user\source\repos\project17\project17\minsearch.c(42): warning C4550: вычисление выражения дает функцию, в которой отсутствует список аргументов
-c:\users\user\source\repos\project17\project17\minsearch.c(70): warning C4047: return: "int" отличается по уровням косвенного обращения от "int *"
-c:\users\user\source\repos\project17\project17\minsearch.c(37): warning C4716: Comparison: должна возвращать значение
+﻿  Deque.c
+c:\users\user\source\repos\project17\project17\deque.c(65): warning C4047: ==: "int (__cdecl *)(Deque *)" отличается по уровням косвенного обращения от "int"
+c:\users\user\source\repos\project17\project17\deque.c(68): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "int"
+c:\users\user\source\repos\project17\project17\deque.c(68): warning C4024: printf: различные типы для формального и фактического параметров 1
   Project17.vcxproj -> C:\Users\user\source\repos\Project17\Debug\Lb3.exe

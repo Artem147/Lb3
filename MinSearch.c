@@ -39,7 +39,7 @@ int Comparison(Deque* D)
 //если он равен первому элементу подотрезка
 int CleanDeque(Deque* D, int* array, int sub_len, int i)
 {//Если дек пуст
-	if (!isEmpty) return 0;
+	if (isEmpty==1) return 0;
 	if (D->data[D->start] == array[i - sub_len])
 		return PopFront(D);
 	else return D->data[D->start];
