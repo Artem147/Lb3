@@ -10,7 +10,7 @@ int Initialize(Deque *D, int n)
 	if (!D->data) return 0;
 	if (n == 1)
 		D->start = 1;
-	else D->start = n / 2;
+	else D->start = n;
 	D->final = D->start-1;
 	return 1;
 };
@@ -23,7 +23,7 @@ int PushFront(Deque *D, int x)
 int PushBack(Deque *D, int x)
 {
 	D->final++;
-	x = D->data[D->final];
+	D->data[D->final] = x;
 	return 1;
 }
 int PopFront(Deque *D)//взять из начала.
