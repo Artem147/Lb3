@@ -2,7 +2,7 @@
 #define _Source_
 #include "Deque.h"
 //Инициализация и ввод массива.
-int* InputData(int n, int* A);
+int* InputData(int n, int N, int* A);
 //Размещение нового элемента по неубыванию.
 int Comparison(Deque* D);
 //Удаление вышедших за подотрезок элементов.

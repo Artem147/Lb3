@@ -24,7 +24,7 @@ int main()
 	int* A;
 	A = NULL;
 	printf("Origin Data ");
-	A = InputData(n, A);
+	A = InputData(n, n, A);
 	Initialize(D,n);
 	/*PrintData(D);*/
 	//for (i = 0; i < n; i++)//Вывод исходного массива.

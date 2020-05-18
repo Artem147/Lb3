@@ -4,13 +4,14 @@
 #include <stdlib.h>
 #include "Deque.h"
 //Создание и заполнение массива. Очистка памяти вне функции.
-int* InputData(int n,int* A)
+int* InputData(int n, int N, int* A)
 {
 	int i;
 	A = malloc(n * sizeof(int));
+	if(n<N) return A;//Return для массива ans[].
 	for(i=0; i<n; i++)
 		scanf("%d", &A[i]);
-	return A;
+	return A;//Return для исходного массива.
 }
 int Comparison(Deque* D) 
 {
@@ -30,10 +31,11 @@ int CleanDeque(Deque* D, int* A, int K)
 int Function(Deque* D, int K, int* A, int n)
 {
 	int i;
-
+	int* ans=NULL;
+	ans = InputData(n - K + 1, n, A);
 	for (i = 0; i < n; i++)
 	{
-		if (i % K) CleanDeque(D);
+		if (i % K) CleanDeque(D,A,K);
 		PushBack(D,A[i]);//Добавляем новый элемент в конец дека.
 		Comparison(D);
 	}
