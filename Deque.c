@@ -4,13 +4,13 @@
 #include <stdlib.h>
 #include "Deque.h"
 
-int Initialize(Deque *D, int n)
+int Initialize(Deque *D, int number)
 {
-	D->data = (int*)malloc(2*n*sizeof(int));
+	D->data = (int*)malloc(2*number*sizeof(int));
 	if (!D->data) return 0;
-	if (n == 1)
+	if (number == 1)
 		D->start = 1;
-	else D->start = n;
+	else D->start = number;
 	D->final = D->start-1;
 	return 1;
 };

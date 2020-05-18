@@ -16,35 +16,36 @@ int main()
 	//Длина разбиения.
 	int sub_len;
 	//Количество элементов.
-	int n;
+	int number;
 	//Счетчик.
 	int i;
 	printf("Split length: ");
 	scanf("%d",&sub_len);
 	printf("Number of elements: ");
-	scanf("%d", &n," ");
+	scanf("%d", &number," ");
 	//Если разбиение больше количества элементов.
-	if (n < sub_len)
+	if (number < sub_len)
 	{
 		printf("Invalid value");
 		return 0;
 	}
 	printf("Origin Data ");
 	//Исходный массив А.
-	int* A;
-	A = NULL;
+	int* array;
+	array = NULL;
 	//Инициализация исходного массива.
-	A = InputData(n, n, A);
+	array = InputData(number, number, array);
 	//Инициализация дека.
-	Initialize(D, n);
+	Initialize(D, number);
 	//Если длина подотрезка равна 1, каждый элемент - минимум подотрезка.
-	if (sub_len == 1) ans = A;
+	if (sub_len == 1) 
+		ans = array;
 	//Иначе запускается алгоритм по поиску минимума. 
-	else ans = Algorithm(D, sub_len, A, n);
+	else ans = Algorithm(D, sub_len, array, number);
 	//Вывод ответа.
-	for (i = 0; i < (n - sub_len + 1); i++)
+	for (i = 0; i < (number - sub_len + 1); i++)
 		printf("%d ", ans[i]);
-	free(A);
+	free(array);
 	free(ans);
 	system("pause");
 	return 0;
