@@ -11,7 +11,7 @@ int Initialize(Deque *D, int n)
 	if (n == 1)
 		D->start = 0;
 	else D->start = n / 2;
-	D->final = D->start;
+	D->final = D->start-1;
 	return 1;
 };
 int PushFront(Deque *D, int x)
