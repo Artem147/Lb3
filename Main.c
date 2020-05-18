@@ -18,7 +18,7 @@ int main(){
 	if (n < K) return 0;
 	int* A;//Исходный массив.
 	printf("Origin Data ");
-	A = InputData(n);
+	A = InputD(n);
 	Initialize(D,n);
 	PrintData(D);
 	for (i = 0; i < n; i++)//Вывод исходного массива.

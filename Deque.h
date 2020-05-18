@@ -1,5 +1,8 @@
+#ifndef DEQUE
+#define DEQUE
 #include <stdio.h>
-typedef struct Deque {
+typedef struct Deque 
+{
 	int* data;
 	int start;//”казатель начала.
 	int final;//”казатель конца.
@@ -12,3 +15,4 @@ int PushBack(Deque* D, int x);//положить в начало.
 int PopBack(Deque *D);//вз€ть из конца.
 int isEmpty(Deque *D);//проверка пустой дек или нет.
 void PrintData(Deque *D);//вывод дека на экран.
+#endif //DEQUE

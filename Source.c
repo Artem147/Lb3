@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "Deque.h"
 
-int* InputData(int n)
+int* InputD(int n)
 {
 	int*A;
 	int i;

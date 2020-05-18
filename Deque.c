@@ -9,9 +9,9 @@ int Initialize(Deque *D, int n)
 	D->data = (int*)malloc(2*n * sizeof(int));
 	if (!D->data) return 0;
 	if (n == 1)
-		D->start = 0;
+		D->start = 1;
 	else D->start = n / 2;
-	D->final = D->start-1;
+	D->final = (D->start)-1;
 	return 1;
 };
 int PushFront(Deque *D, int x)
