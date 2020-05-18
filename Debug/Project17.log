@@ -1,4 +1,10 @@
-﻿  Source.c
-c:\users\user\source\repos\project17\project17\source.c(57): warning C4047: return: "int" отличается по уровням косвенного обращения от "int *"
+﻿  Main.c
+c:\users\user\source\repos\project17\project17\main.c(25): warning C4474: "scanf" : для строки формата передано слишком много аргументов
+  c:\users\user\source\repos\project17\project17\main.c(25): note: заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+c:\users\user\source\repos\project17\project17\main.c(43): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
+  Source.c
+c:\users\user\source\repos\project17\project17\source.c(31): warning C4550: вычисление выражения дает функцию, в которой отсутствует список аргументов
+c:\users\user\source\repos\project17\project17\source.c(58): warning C4047: return: "int" отличается по уровням косвенного обращения от "int *"
+  Создание кода...
 c:\users\user\source\repos\project17\project17\source.c(26): warning C4716: Comparison: должна возвращать значение
   Project17.vcxproj -> C:\Users\user\source\repos\Project17\Debug\Lb3.exe

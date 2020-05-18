@@ -6,33 +6,46 @@
 #include "Source.h"
 
 int main()
-{//Массив из минимумов на каждом подотрезке.
+{
+	//Массив из минимумов на каждом подотрезке.
 	int* ans;
 	ans = NULL;
 	//дек
 	Deque* D;
 	D = malloc(sizeof(Deque));
 	//Длина разбиения.
-	int K;
+	int sub_len;
 	//Количество элементов.
 	int n;
-	//Счетчики.
+	//Счетчик.
 	int i;
 	printf("Split length: ");
-	scanf("%d",&K);
+	scanf("%d",&sub_len);
 	printf("Number of elements: ");
-	scanf("%d ", &n);
-	if (n < K) return 0;
-	//Исходный массив.
+	scanf("%d", &n," ");
+	//Если разбиение больше количества элементов.
+	if (n < sub_len)
+	{
+		printf("Invalid value");
+		return 0;
+	}
+	printf("Origin Data ");
+	//Исходный массив А.
 	int* A;
 	A = NULL;
-	printf("Origin Data ");
+	//Инициализация исходного массива.
 	A = InputData(n, n, A);
-	Initialize(D,n);
-	ans = Function(D,K,A,n);
-	/*PrintData(D);*/
-	for (i = 0; i < (n - K + 1); i++)//Вывод ответа.
+	//Инициализация дека.
+	Initialize(D, n);
+	//Если длина подотрезка равна 1, каждый элемент - минимум подотрезка.
+	if (sub_len == 1) ans = A;
+	//Иначе запускается алгоритм по поиску минимума. 
+	else ans = Algorithm(D, sub_len, A, n);
+	//Вывод ответа.
+	for (i = 0; i < (n - sub_len + 1); i++)
 		printf("%d ", ans[i]);
+	free(A);
+	free(ans);
 	system("pause");
 	return 0;
 }
