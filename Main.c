@@ -5,7 +5,8 @@
 #include "Deque.h"
 #include "Source.h"
 
-int main(){
+int main()
+{
 	Deque* D;
 	D = malloc(sizeof(Deque));
 	int K;//Длина разбиения.
@@ -16,11 +17,12 @@ int main(){
 	printf("Number of elements: ");
 	scanf("%d ", &n);
 	if (n < K) return 0;
-	int* A;//Исходный массив.
+	int* A; //Исходный массив.
+	A = NULL;
 	printf("Origin Data ");
-	A = InputD(n);
+	A = InputD(n, A);
 	Initialize(D,n);
-	PrintData(D);
+	/*PrintData(D);*/
 	for (i = 0; i < n; i++)//Вывод исходного массива.
 		printf("%d ", A[i]);
 	system("pause");

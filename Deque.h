@@ -1,5 +1,5 @@
-#ifndef DEQUE
-#define DEQUE
+#ifndef UniqueDEQUE
+#define UniqueDEQUE
 #include <stdio.h>
 typedef struct Deque 
 {
