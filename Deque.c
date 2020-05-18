@@ -1,9 +1,16 @@
+/*
+	MinSearch
+	Функция инициализации дека, реализация основных функций дека.
+	Ширкунов А.В.
+	ИВТ - 13БО
+*/
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
 #include "Deque.h"
 
+//Инициализация дека. 
 int Initialize(Deque *D, int number)
 {
 	D->data = (int*)malloc(2*number*sizeof(int));
@@ -14,37 +21,52 @@ int Initialize(Deque *D, int number)
 	D->final = D->start-1;
 	return 1;
 };
+
+//Положить x в начало.
 int PushFront(Deque *D, int x)
 {
 	D->start--;
 	 D->data[D->start]=x;
 	return 1;
 }
+
+//Положить x в конец.
 int PushBack(Deque *D, int x)
 {
 	D->final++;
 	D->data[D->final] = x;
 	return 1;
 }
-int PopFront(Deque *D)//взять из начала.
+
+//Взять из начала.
+int PopFront(Deque *D)
 {
 	D->start++;
 	return D->data[D->start - 1];
 }
-int PopBack(Deque *D)//Взять из конца.
+
+//Взять из конца.
+int PopBack(Deque* D)
 {
 	D->final--;
 	return D->data[D->final + 1];;
 }
-int isEmpty(Deque *D)//проверка пустой дек или нет.
+//проверка пустой дек или нет. 0 если пустой, 1 если непустой.
+int isEmpty(Deque* D)
 {
 	if (D->start > D->final) return 0;
 	else return 1;
 }
-void PrintData(Deque *D)
+
+//Вывод дека на экран.
+void PrintData(Deque* D)
 {
 	int i;
-	if (D->start == D->final) printf(D->data[D->start]);
+	if (!isEmpty) return;
+	//Если в деке один элемент.
+	if (D->start == D->final) 
+		printf(D->data[D->start]);
+	//Если в деке не один элемент.
 	else 
 		for (i = D->start; i <= D->final; i++)
 			printf("%d ", D->data[i]);

@@ -26,11 +26,11 @@
     <ClCompile Include="Deque.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Source.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClCompile>
-    <ClCompile Include="Source.c">
+    <ClCompile Include="MinSearch.c">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MinSearch.h">
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

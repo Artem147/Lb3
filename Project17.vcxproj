@@ -118,8 +118,8 @@
   <ItemGroup>
     <ClCompile Include="Deque.c" />
     <ClCompile Include="Main.c" />
-    <ClCompile Include="Source.c" />
-    <ClCompile Include="Source.h" />
+    <ClCompile Include="MinSearch.c" />
+    <ClCompile Include="MinSearch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Deque.h" />

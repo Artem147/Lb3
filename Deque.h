@@ -1,18 +1,42 @@
+/*
+	MinSearch
+	Функция для поиска минимума на каждом подотрезке данного массива А.
+	Ширкунов А.В.
+	ИВТ - 13БО
+*/
 #ifndef _DEQUE_
 #define _DEQUE_
 #include <stdio.h>
+
 typedef struct Deque 
 {
+	//Массив дека.
 	int* data;
-	int start;//Указатель начала.
-	int final;//Указатель конца.
-	int  size;//Размер дека.
+	//Указатель начала.
+	int start;
+	//Указатель конца.
+	int final;
 }Deque;
-int Initialize(Deque * D, int number);//Инициализация дека.
-int PushFront(Deque * D, int x);//положить в начало.
-int PopFront(Deque * D);//взять из начала.
-int PushBack(Deque* D, int x);//положить в начало.
-int PopBack(Deque *D);//взять из конца.
-int isEmpty(Deque *D);//проверка пустой дек или нет.
-void PrintData(Deque *D);//вывод дека на экран.
+
+//Инициализация дека.
+int Initialize(Deque* D, int number);
+
+//Положить x в начало.
+int PushFront(Deque* D, int x);
+
+//Взять из начала.
+int PopFront(Deque* D);
+
+//Положить x в конец.
+int PushBack(Deque* D, int x);
+
+//Взять из конца.
+int PopBack(Deque* D);
+
+//Проверка пустой дек или нет.
+int isEmpty(Deque* D);
+
+//Вывод дека на экран.
+void PrintData(Deque* D);
+
 #endif //_DEQUE_
