@@ -29,7 +29,7 @@ int PushBack(Deque *D, int x)
 int PopFront(Deque *D)//взять из начала.
 {
 	D->start++;
-	return D->data[D->start - 1];;
+	return D->data[D->start - 1];
 }
 int PopBack(Deque *D)//Взять из конца.
 {

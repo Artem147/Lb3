@@ -6,7 +6,7 @@ int* InputData(int n, int N, int* A);
 //Размещение нового элемента по неубыванию.
 int Comparison(Deque* D);
 //Удаление вышедших за подотрезок элементов.
-int CleanDeque(Deque* D, int* A, int K);
+int CleanDeque(Deque* D, int* A, int K, int i);
 //Алгоритм.
-int Function(Deque* D, int K, int* A,int n);
+int Function(Deque* D, int K, int* A, int n);
 #endif //_Source_

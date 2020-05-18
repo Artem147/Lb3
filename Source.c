@@ -28,7 +28,7 @@ int Comparison(Deque* D)
 //если он равен первому элементу подотрезка
 int CleanDeque(Deque* D, int* A, int K, int i) 
 {//Если дек пуст
-	if (isEmpty) return 0;
+	if (!isEmpty) return 0;
 	if (D->data[D->start] == A[i - K])
 		return PopFront(D);
 	else return D->data[D->start];
@@ -44,7 +44,7 @@ int Function(Deque* D, int K, int* A, int n)
 	for (i = 0; i < n; i++)
 	{
 		//Если пройден подотрезок, записываем минимум в ответ. 
-		if (i % K)
+		if (i < K)
 		{
 			ans[j] = CleanDeque(D, A, K, i);
 			j++;
@@ -54,4 +54,5 @@ int Function(Deque* D, int K, int* A, int n)
 		//Сравнение элементов, минимум оказывается на вершине дека.
 		Comparison(D);
 	}
+	return ans;
 }

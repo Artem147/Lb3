@@ -6,7 +6,10 @@
 #include "Source.h"
 
 int main()
-{
+{//Массив из минимумов на каждом подотрезке.
+	int* ans;
+	ans = NULL;
+	//дек
 	Deque* D;
 	D = malloc(sizeof(Deque));
 	//Длина разбиения.
@@ -26,6 +29,7 @@ int main()
 	printf("Origin Data ");
 	A = InputData(n, n, A);
 	Initialize(D,n);
+	ans = Function(D,K,A,n);
 	/*PrintData(D);*/
 	//for (i = 0; i < n; i++)//Вывод исходного массива.
 	//	printf("%d ", A[i]);
