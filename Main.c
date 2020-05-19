@@ -65,7 +65,7 @@ int main()
 		ans = array;
 	//Иначе запускается алгоритм по поиску минимума. 
 	else 
-		ans = Algorithm(D, sub_len, array, number);
+		ans = SubMin(D, sub_len, array, number);
 
 	//Вывод ответа.
 	for (i = 0; i < (number - sub_len + 1); i++)

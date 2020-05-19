@@ -57,7 +57,7 @@ int CleanDeque(Deque* D, int* array, int sub_len, int i)
 }
 
 //Добавляет элемент в дек. Если подотрезок пройден, выводит минимум в массив ans. 
-int Algorithm(Deque* D, int sub_len, int* array, int number)
+int SubMin(Deque* D, int sub_len, int* array, int number)
 {
 	int i, j=0;
 	//Массив с минимумами на подотрезках.

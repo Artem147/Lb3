@@ -22,5 +22,5 @@ int Comparison(Deque* D);
 int CleanDeque(Deque* D, int* array, int sub_len, int i);
 
 //Алгоритм.
-int Algorithm(Deque* D, int sub_len, int* array, int number);
+int SubMin(Deque* D, int sub_len, int* array, int number);
 #endif //!_MinSearch_
