@@ -54,7 +54,7 @@ int main()
 	array = InputData(number, array);
 
 	//Инициализация дека.
-	if(!Initialize(D, number)) 
+	if(Initialize(D, number)) 
 	{
 		printf("Invalid value");
 		return 0;

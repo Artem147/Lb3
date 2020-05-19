@@ -1,4 +1,10 @@
-﻿  Main.c
+﻿  Deque.c
+c:\users\user\source\repos\project17\project17\deque.c(29): warning C4047: ==: "int (__cdecl *)(Deque *)" отличается по уровням косвенного обращения от "int"
+c:\users\user\source\repos\project17\project17\deque.c(38): warning C4047: ==: "int (__cdecl *)(Deque *)" отличается по уровням косвенного обращения от "int"
+c:\users\user\source\repos\project17\project17\deque.c(76): warning C4047: ==: "int (__cdecl *)(Deque *)" отличается по уровням косвенного обращения от "int"
+c:\users\user\source\repos\project17\project17\deque.c(79): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "int"
+c:\users\user\source\repos\project17\project17\deque.c(79): warning C4024: printf: различные типы для формального и фактического параметров 1
+  Main.c
 c:\users\user\source\repos\project17\project17\main.c(39): warning C4474: "scanf" : для строки формата передано слишком много аргументов
   c:\users\user\source\repos\project17\project17\main.c(39): note: заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
 c:\users\user\source\repos\project17\project17\main.c(68): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"

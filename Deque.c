@@ -13,32 +13,35 @@
 //Инициализация дека. 
 int Initialize(Deque* D, int number)
 {
-	D->data = (int*)malloc(2*number*sizeof(int));
-	if (!D->data) return 0;
+	D->size = 2 * number;
+	D->data = (int*)malloc(D->size*sizeof(int));
+	if (!D->data) return 1;
 	if (number == 1)
 		D->start = 1;
 	else D->start = number;
 	D->final = D->start-1;
-	return 1;
+	return 0;
 };
 
-//Положить x в начало.
+//Положить x в начало. 1, если дек переполнен.
 int PushFront(Deque* D, int x)
 {
+	if (IsFull == 1) return 1;
 	D->start--;
 	 D->data[D->start]=x;
-	return 1;
+	return 0;
 }
 
-//Положить x в конец.
+//Положить x в конец. 1, если дек переполнен.
 int PushBack(Deque* D, int x)
 {
+	if (IsFull == 1) return 1;
 	D->final++;
 	D->data[D->final] = x;
-	return 1;
+	return 0;
 }
 
-//Взять из начала.
+//Взять из начала. 
 int PopFront(Deque* D)
 {
 	D->start++;
@@ -56,6 +59,13 @@ int PopBack(Deque* D)
 int IsEmpty(Deque* D)
 {
 	if (D->start > D->final) return 1;
+	else return 0;
+}
+
+//проверка полный дек или нет. 1 если полный, 0 если неполный.
+int IsFull(Deque* D)
+{
+	if (D->start <=0 || D->final >= D->size) return 1;
 	else return 0;
 }
 
