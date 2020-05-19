@@ -30,13 +30,17 @@ int* InputData(int number, int* array)
 
 //Ставит новый элемент в дек в порядке неубывания. 
 //Элементы больше перед ним заменяются новым элементом.
-int Comparison(Deque* D) 
+int Comparison(Deque* D, int exlast)
 {
-	//Пока новый элемент меньше минимума или начало меньше конца.
-	while (D->data[D->final]< D->data[(D->final)-1] && D->final != D->start)
-	{//Меньший элемент встает на место большего.
-		D->data[(D->final) - 1] = D->data[D->final];
-		D->final--;
+	int new_el = D->data[D->final];
+	//Если последний элемент в деке больше предпоследнего, последний заменяет предпоследний.
+	while (new_el < exlast && D->final != D->start)
+	{
+		//Меньший элемент встает на место большего.
+		new_el = PopBack(D);
+		PopBack(D);
+		exlast= D->data[D->final];
+		PushBack(D, new_el);
 	}
 }
 
@@ -47,8 +51,8 @@ int CleanDeque(Deque* D, int* array, int sub_len, int i)
 	//Если дек пуст
 	if (IsEmpty==1) 
 		return 0;
-	//Если минимум на вершине равен ушедшему из подотрезка элементу 
-	//удаляем его из дека.
+	//Если минимум на вершине равен ушедшему из
+	//подотрезка элементу удаляем его из дека.
 	if (D->data[D->start] == array[i - sub_len])
 		return PopFront(D);
 	//иаче возвращаем минимум
@@ -60,6 +64,8 @@ int CleanDeque(Deque* D, int* array, int sub_len, int i)
 int SubMin(Deque* D, int sub_len, int* array, int number)
 {
 	int i, j=0;
+	//Предпоследний элемент.
+	int exlast;
 	//Массив с минимумами на подотрезках.
 	int* ans=NULL;
 	//Выделение памяти массива с ответом.
@@ -72,10 +78,11 @@ int SubMin(Deque* D, int sub_len, int* array, int number)
 			ans[j] = CleanDeque(D, array, sub_len, i);
 			j++;
 		}
+		exlast = D->data[D->final];
 		//Добавляем новый элемент в конец дека.
 		PushBack(D, array[i]);
 		//Сравнение элементов, минимум оказывается на вершине дека.
-		Comparison(D);
+		Comparison(D,exlast);
 	}
 	ans[j] = CleanDeque(D, array, sub_len, i);
 	return ans;

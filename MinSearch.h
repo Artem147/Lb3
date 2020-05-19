@@ -16,7 +16,7 @@ int* InputData(int number, int* array);
 int* MemoryData(int number, int* array);
 
 //Размещение нового элемента по неубыванию.
-int Comparison(Deque* D);
+int Comparison(Deque* D, int exlast);
 
 //Удаление вышедших за подотрезок элементов.
 int CleanDeque(Deque* D, int* array, int sub_len, int i);
