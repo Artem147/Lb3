@@ -16,6 +16,7 @@ typedef struct Deque
 	int start;
 	//Указатель конца.
 	int final;
+	int size;
 }Deque;
 
 //Инициализация дека.
@@ -34,7 +35,7 @@ int PushBack(Deque* D, int x);
 int PopBack(Deque* D);
 
 //Проверка пустой дек или нет.
-int isEmpty(Deque* D);
+int IsEmpty(Deque* D);
 
 //Вывод дека на экран.
 void PrintData(Deque* D);

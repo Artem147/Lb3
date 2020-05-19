@@ -49,10 +49,11 @@ int PopFront(Deque* D)
 int PopBack(Deque* D)
 {
 	D->final--;
-	return D->data[D->final + 1];;
+	return D->data[D->final + 1];
 }
+
 //проверка пустой дек или нет. 1 если пустой, 0 если непустой.
-int isEmpty(Deque* D)
+int IsEmpty(Deque* D)
 {
 	if (D->start > D->final) return 1;
 	else return 0;
@@ -62,7 +63,7 @@ int isEmpty(Deque* D)
 void PrintData(Deque* D)
 {
 	int i;
-	if (isEmpty == 1) return;
+	if (IsEmpty == 1) return;
 	//≈сли в деке один элемент.
 	if (D->start == D->final) 
 		printf(D->data[D->start]);

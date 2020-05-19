@@ -45,7 +45,7 @@ int Comparison(Deque* D)
 int CleanDeque(Deque* D, int* array, int sub_len, int i)
 {
 	//Если дек пуст
-	if (isEmpty==1) 
+	if (IsEmpty==1) 
 		return 0;
 	//Если минимум на вершине равен ушедшему из подотрезка элементу 
 	//удаляем его из дека.
