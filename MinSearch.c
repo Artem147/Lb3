@@ -10,20 +10,21 @@
 #include <stdlib.h>
 #include "Deque.h"
 
-//Создание и заполнение массива. Очистка памяти вне функции.
-int* InputData(int number, int origin_number, int* array)
+//Выделение памяти массива. Очистка памяти вне функции.
+int* MemoryData(int number, int* array)
+{
+	array = malloc(number * sizeof(int));
+	if (!array)
+		return NULL;
+	return array;
+}
+
+//Заполнение массива. Ввод с клавиатуры.
+int* InputData(int number, int* array)
 {
 	int i;
-	array = malloc(number * sizeof(int));
-	if (!array) 
-		return NULL;
-	//Сравниваем количество элементов, с количеством элементов
-	//исходного массива. Return для массива ans[].
-	if(number< origin_number) 
-		return array;
-	for(i=0; i< number; i++)
+	for (i = 0; i < number; i++)
 		scanf("%d", &array[i]);
-	//Return для исходного массива.
 	return array;
 }
 
@@ -62,7 +63,7 @@ int Algorithm(Deque* D, int sub_len, int* array, int number)
 	//Массив с минимумами на подотрезках.
 	int* ans=NULL;
 	//Выделение памяти массива с ответом.
-	ans = InputData(number - sub_len + 1, number, array);
+	ans = MemoryData(number - sub_len + 1, array);
 	for (i = 0; i < number; i++)
 	{
 		//Если пройден подотрезок, записываем минимум в ответ. 

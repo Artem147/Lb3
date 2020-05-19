@@ -9,8 +9,11 @@
 #define _MinSearch_
 #include "Deque.h"
 
-//Инициализация и ввод массива, очистка памяти в мейне..
-int* InputData(int number, int origin_number, int* array);
+//Заполнение массива. Ввод с клавиатуры.
+int* InputData(int number, int* array);
+
+//Выделение памяти массива. Очистка памяти вне функции.
+int* MemoryData(int number, int* array);
 
 //Размещение нового элемента по неубыванию.
 int Comparison(Deque* D);

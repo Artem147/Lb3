@@ -50,7 +50,8 @@ int main()
 	int* array;
 	array = NULL;
 	//Инициализация исходного массива.
-	array = InputData(number, number, array);
+	array = MemoryData(number, array);
+	array = InputData(number, array);
 
 	//Инициализация дека.
 	if(!Initialize(D, number)) 
